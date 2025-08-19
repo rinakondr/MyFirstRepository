@@ -49,8 +49,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 # 🔹 Запуск приложения
+from telegram.ext import ApplicationBuilder
+
 def main():
-    app = Application.builder().token(TOKEN).build()
+    app = ApplicationBuilder().token(TOKEN).build()  # <-- исправлено
 
     # Регистрируем хендлеры
     app.add_handler(CommandHandler("start", start))
@@ -59,7 +61,6 @@ def main():
 
     print("🤖 Бот запущен и слушает сообщения...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)
-
 
 if __name__ == "__main__":
     main()
