@@ -3,10 +3,9 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 
 # 🔑 Данные бота из переменных окружения
-TOKEN = os.environ["7800572322:AAFZmkwK_kXnhey1oZk289dQLv0s2uQOgyw
-"]
-OWNER_ID = int(os.environ["1446412573
-"])
+TOKEN = os.environ["TOKEN"]
+OWNER_ID = int(os.environ["OWNER_ID"])
+
 
 WELCOME_TEXT = """
 🍀 Привет~
